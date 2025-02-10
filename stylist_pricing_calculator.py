@@ -22,10 +22,10 @@ st.title("Stylist Pricing Calculator")
 # Inputs
 selected_product = st.selectbox("Select Product", list(product_data.keys()))
 unit_cost = product_data[selected_product]
-color_used = st.number_input("Amount of Color Used (oz/ml)", min_value=0.0, format="%.2f")
+color_used = st.number_input("Amount of Color Used (ml)", min_value=0.0, format="%.2f")
 duration = st.number_input("Appointment Duration (minutes)", min_value=1, step=1)
 stylist_level = st.selectbox("Stylist Level", ["Junior", "Mid-Level", "Senior"])
-target_margin = st.slider("Target Profit Margin (%)", 0, 50, 25) / 100
+target_margin = 0.20
 
 # Stylist hourly rates
 stylist_rates = {"Junior": 25, "Mid-Level": 35, "Senior": 50}
